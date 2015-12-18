@@ -1,0 +1,7 @@
+<%= form_for @post, url: "/posts" do |f| %>
+
+  Title: <%= f.text_field :comment %>
+  Image Url: <%= f.text_field :img_url %>
+  Comment: <%= f.text_area :body %>
+
+<% end %>

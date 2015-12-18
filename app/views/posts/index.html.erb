@@ -1,0 +1,17 @@
+<h1> Puppies!! So many puppies!!</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+  <li>
+    <div class="post">
+      <h3><%= "#{post.comment}"%></h3>
+      <div class="image-holder">
+        <%= image_tag(post.img_url) %>
+      </div>
+      <p>
+        <%= "#{post.body}" %>
+      </p>
+    </div>
+  </li>
+  <% end %>
+</ul>
