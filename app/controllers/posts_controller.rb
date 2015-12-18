@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.all
-
+    @posts = Post.all
   end
 
   def show
@@ -46,7 +45,7 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(
       :title,
-      :body
+      :body,
       :img_url
     )
   end

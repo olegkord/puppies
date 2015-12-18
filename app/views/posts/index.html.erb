@@ -11,6 +11,8 @@
       <p>
         <%= "#{post.body}" %>
       </p>
+      <p><%= link_to "Edit this Post", edit_post_path(id: post.id) %></p>
+
     </div>
   </li>
   <% end %>
