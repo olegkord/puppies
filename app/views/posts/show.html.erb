@@ -1,0 +1,8 @@
+<h1>CHECK OUT THE CUTENESS:</h1>
+<div class="image-holder">
+  <%= image_tag(@post.img_url) %>
+</div>
+<%= "#{@post.body}" %>
+  <p><%= link_to "Edit this Post", edit_post_path(id: @post.id) %></p>
+  <p><%= link_to "delete this pupper", @post, method: :delete %>
+  <p><%= link_to "Go Home", posts_path %>

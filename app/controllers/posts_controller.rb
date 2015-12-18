@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.create(post_params)
+
     if post.save
       redirect_to '/posts'
     else
@@ -28,13 +29,14 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     if post.update(post_params)
-      redirect_to '/posts'
+      redirect_to posts_path
     else
       redirect_to '/posts/edit'
     end
   end
 
   def destroy
+    puts "DESTROY!!"
     post = Post.find(params[:id])
     post.destroy
     redirect_to '/posts'
@@ -44,7 +46,7 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(
-      :title,
+      :comment,
       :body,
       :img_url
     )

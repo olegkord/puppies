@@ -1,6 +1,6 @@
 <h1>Edit your Post:</h1>
 
-<%= form_for @post, url: "/posts" do |f| %>
+<%= form_for @post, url: {controller: "posts", action: "update", id: @post.id} do |f| %>
 
   Title: <%= f.text_field :comment %>
   Image Url: <%= f.text_field :img_url %>

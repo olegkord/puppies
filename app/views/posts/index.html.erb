@@ -8,12 +8,7 @@
       <div class="image-holder">
         <%= image_tag(post.img_url) %>
       </div>
-      <p>
-        <%= "#{post.body}" %>
-      </p>
-      <p><%= link_to "Edit this Post", edit_post_path(id: post.id) %></p>
-
-    </div>
+      <p><%= "#{post.body}" %> | <%= link_to "View this pupper up close", post_path(id: post.id)%></p>
   </li>
   <% end %>
 </ul>
