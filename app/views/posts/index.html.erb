@@ -2,6 +2,7 @@
 
 <ul>
   <% @posts.each do |post| %>
+  &nbsp;
   <li>
     <div class="post">
       <h3><%= "#{post.comment}"%></h3>
@@ -10,5 +11,6 @@
       </div>
       <p><%= "#{post.body}" %> | <%= link_to "View this pupper up close", post_path(id: post.id)%></p>
   </li>
+  &nbsp;
   <% end %>
 </ul>
